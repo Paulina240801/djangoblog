@@ -11,13 +11,13 @@
         <h3>Autor to ja</h3>
     </div>
 
-        {% for post in posts %}
+    {% for post in posts %}
     <div>
     <p>opublikowany : {{ post.published_date }}</p>
     <h2><a href ="">{{ post.title }}</a></h2>
     <em>{{ post.text|linebreaksbr }}</em>
     </div>
-            {% endfor %}
+    {% endfor %}
 
 </body>
 </html>
