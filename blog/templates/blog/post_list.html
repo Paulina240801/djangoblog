@@ -13,9 +13,9 @@
 
     {% for post in posts %}
     <div>
-    <p>opublikowany : {{ post.published_date }}</p>
-    <h2><a href ="">{{ post.title }}</a></h2>
-    <em>{{ post.text|linebreaksbr }}</em>
+    <p>opublikowany: {{ post.publish_date }}<p>
+    <h2><a href=""> {{ post.title }}</a></h2>
+        <em>{{ post.text|linebreaksbr }}</em>
     </div>
     {% endfor %}
 
