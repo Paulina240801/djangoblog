@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    {% extends 'blog/base.html' %}
 
-</body>
-</html>
+    {% block content %}
+        <div class="post">
+            {% if post.publish_date %}
+            <div class="date">
+                {{ post.publish_date }}
+                <p>opublikowany: {{ post.publish_date }}</p>
+            </div>
+            {% endif %}
+            <h2>{{ post.title }}</h2>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="Obrazek" width="250px">
+            {% endif %}
+            <em>{{ post.text|linebreaksbr }}</em>
+        </div>
+{% endblock %}
